@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRUTA X architecture notes — D3F4UL7T</title>
+  <meta name="description" content="BRUTA X architecture notes">
+  <meta name="theme-color" content="#0a0b0c">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <nav class="term">
+        <a href="../../index.html">home</a>
+        <a href="../index.html">research</a>
+        <a href="../../about/index.html">about</a>
+      </nav>
+    </header>
+    <article class="post">
+      <h1>BRUTA X architecture notes</h1>
+      <time datetime="2026-11-03">2026-11-03</time>
+      <p>When building BRUTA X, UI code stays in app/ui, pure assessment logic in app/modules, and cross-cutting concerns (jobs, RBAC, correlation) in app/services. That split keeps PySide6 views from owning network policy. Authorization is enforced in module entry points and workflows — a checkbox in the UI is not enough by itself; the backend must refuse unauthorized active checks. Correlation only creates graph edges from concrete evidence fields (DNS answers, cert CN, finding IDs), never from guesses.</p>
+      <p class="muted"><a href="../index.html">← research</a></p>
+    </article>
+    <footer class="site"><p>D3F4UL7T</p></footer>
+  </div>
+</body>
+</html>
